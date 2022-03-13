@@ -7,11 +7,14 @@ module.exports = {
     extend: {
 
       colors: {
-        fullbg: '#e0e0e0',
-        moviesgreen:'50b83c',
-        moviesblack:'#171717',
+        fullbg: '#f9fafc',
+        mgreen:'#50b83c',
+        mblack:'#171717',
         blacksurface:'#242424',
 
+      },
+      boxShadow: {
+        '3xl' : '0px 0px 12px rgba(0, 0, 0, 0.25);'
       }
 
     },
