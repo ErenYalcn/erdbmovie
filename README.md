@@ -16,7 +16,7 @@
 
   <p align="center">
     I completed this project to improve my skills! <br />
-    <a href="https://erenyalcn.dev/">Demo Site</a>
+    <a href="https://erdb-movie-project.netlify.app/">Demo Site</a>
     <br />
   </p>
 </div>
