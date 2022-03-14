@@ -9,8 +9,9 @@ import MovieComponent from './MovieComponent'
 
 const API_KEY = 'd0b2b94b';
 
-export default function Searchbox(eren) {
+export default function Searchbox() {
     const [search, setSearch] = useState();
+    
 
     const [timeoutId, setTimeoutId] = useState();
 
@@ -26,10 +27,21 @@ export default function Searchbox(eren) {
     const onTextChange =(e) => {
         clearTimeout(timeoutId);
         setSearch(e.target.value);
-        const timeout = setTimeout(() => fetchData(e.target.value), 500);
-        setTimeoutId(timeout);
+
         
     };
+
+
+    const Clearbtn = () => {
+        console.log('temizledi');
+        setSearch('');
+        }
+        
+    const Searchbtn = (e) => {
+        console.log('arabutona basıldı');
+        fetchData(search);
+        }
+    
 
   return (
       <div className='pt-12 sm:pt-[209px] mx-auto'>
@@ -53,8 +65,8 @@ export default function Searchbox(eren) {
 
 
         <div className='right-0 flex justify-end gap-x-4 my-2'>
-            <button className='text-mgreen text-[16px] font-bold hover:bg-mgreen hover:text-white transition-all p-3 tracking-wider rounded-[32px] transition-all'>clear</button>
-            <button className='text-white bg-mgreen hover:bg-green-600 transition-all p-3 rounded-[32px] text-[16px] tracking-wider font-bold'>search</button>
+            <button className='text-mgreen text-[16px] font-bold hover:bg-mgreen hover:text-white transition-all p-3 tracking-wider rounded-[32px] transition-all' onClick={Clearbtn}>clear</button>
+            <button className='text-white bg-mgreen hover:bg-green-600 transition-all p-3 rounded-[32px] text-[16px] tracking-wider font-bold'type='submit' onClick={Searchbtn}>search</button>
         </div>
     </div>
 
